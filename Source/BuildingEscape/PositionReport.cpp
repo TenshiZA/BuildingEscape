@@ -4,6 +4,7 @@
 #include "PositionReport.h"
 
 
+
 // Sets default values for this component's properties
 UPositionReport::UPositionReport()
 {
@@ -19,8 +20,10 @@ UPositionReport::UPositionReport()
 void UPositionReport::BeginPlay()
 {
 	Super::BeginPlay();
-
-	UE_LOG(LogTemp,Warning, TEXT("Position reporting for duty!"));
+	
+	FString ObjectName = GetOwner()->GetName();
+	
+	UE_LOG(LogTemp,Warning, TEXT("Position reporting %s for duty !"), *ObjectName );
 	
 }
 
