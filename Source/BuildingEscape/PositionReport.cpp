@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "PositionReport.h"
 
 
@@ -22,8 +21,10 @@ void UPositionReport::BeginPlay()
 	Super::BeginPlay();
 	
 	FString ObjectName = GetOwner()->GetName();
+	FString ObjectPos = GetOwner()->GetActorTransform().GetLocation().ToString();
 	
-	UE_LOG(LogTemp,Warning, TEXT("Position reporting %s for duty !"), *ObjectName );
+	
+	UE_LOG(LogTemp,Warning, TEXT("%s is at pos %s"), *ObjectName, *ObjectPos );
 	
 }
 
