@@ -6827,6 +6827,7 @@ SOURCES += \
 	"$$unrealRootPath/Engine/Plugins/Tests/RuntimeTests/Source/RuntimeTests/Private/Slate/RichTextMarkupProcessingTest.cpp" \
 	"$$unrealRootPath/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Private/ScreenshotTools.cpp" \
 	"$$BuildingEscapeRootPath/Source/BuildingEscape/BuildingEscape.cpp" \
+	"$$BuildingEscapeRootPath/Source/BuildingEscape/OpenDoor.cpp" \
 	"$$BuildingEscapeRootPath/Source/BuildingEscape/PositionReport.cpp" \
  
 

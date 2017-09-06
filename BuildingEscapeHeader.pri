@@ -8840,6 +8840,7 @@ HEADERS += \
 	"$$unrealRootPath/Engine/Plugins/Tests/RuntimeTests/Source/RuntimeTests/Public/RuntimeTests.h" \
 	"$$unrealRootPath/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Public/ScreenshotTools.h" \
 	"$$BuildingEscapeRootPath/Source/BuildingEscape/BuildingEscape.h" \
+	"$$BuildingEscapeRootPath/Source/BuildingEscape/OpenDoor.h" \
 	"$$BuildingEscapeRootPath/Source/BuildingEscape/PositionReport.h" \
  
 
