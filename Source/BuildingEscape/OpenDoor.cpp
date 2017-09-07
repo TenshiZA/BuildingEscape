@@ -21,7 +21,7 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
 	//get the owner
-	AActor * Owner = GetOwner();
+	Owner = GetOwner();
 
 	//create a new rotation
 	FRotator MyCurrentRot = FRotator(0.0f,90.0f,0.0f);
@@ -37,6 +37,11 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	// ...	
+	FRotator MyCurrentRot = Owner->GetActorRotation();
+	if ( MyCurrentRot.Yaw < 150.0f ) { MyCurrentRot.Yaw += 1; }
+	//update the rotation of the actor
+	Owner->SetActorRotation(MyCurrentRot);
+
 }
 
