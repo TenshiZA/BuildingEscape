@@ -14,11 +14,7 @@ UOpenDoor::UOpenDoor()
 	// ...
 }
 
-
-// Called when the game starts
-void UOpenDoor::BeginPlay()
-{
-	Super::BeginPlay();
+void UOpenDoor::OpenTheDoor(){
 
 	//get the owner
 	Owner = GetOwner();
@@ -28,6 +24,15 @@ void UOpenDoor::BeginPlay()
 
 	//update the rotation of the actor
 	Owner->SetActorRotation(MyCurrentRot);
+
+
+}
+
+
+// Called when the game starts
+void UOpenDoor::BeginPlay()
+{
+	Super::BeginPlay();
 	
 }
 
@@ -38,10 +43,22 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...	
-	FRotator MyCurrentRot = Owner->GetActorRotation();
+	/*FRotator MyCurrentRot = Owner->GetActorRotation();
 	if ( MyCurrentRot.Yaw < 150.0f ) { MyCurrentRot.Yaw += 1; }
 	//update the rotation of the actor
-	Owner->SetActorRotation(MyCurrentRot);
+	Owner->SetActorRotation(MyCurrentRot);*/
+
+
+	//Poll the Trigger Volume
+	if ( PressurePlate->IsOverlappingActor(ActorThatOpens)){
+		//IF the ActorThatopens touches it Open the door
+		UE_LOG(LogTemp,Warning, TEXT("Touching the door") );
+		OpenTheDoor();
+
+	}
+
+	
+
 
 }
 

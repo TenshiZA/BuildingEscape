@@ -22,6 +22,7 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
+	void OpenTheDoor();
 
 public:	
 	// Called every frame
@@ -31,6 +32,7 @@ private:
 	//this UUPROPERTY is a macro
 	UPROPERTY(VisibleAnywhere) float openAngle = 90.0f;
 	UPROPERTY(EditAnywhere) ATriggerVolume* PressurePlate;
+	UPROPERTY(EditAnywhere) AActor* ActorThatOpens; //remeber Pawn inherits from AActor
 
 	AActor* Owner;
 	

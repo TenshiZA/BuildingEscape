@@ -17,7 +17,11 @@
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
-            }
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
         },
         {
             "name": "Linux",
@@ -27,7 +31,7 @@
                 "/usr/local/include",
                 "/usr/lib/clang/3.8.0/include",
                 "/usr/include",
-                "/usr/include/x86_64-linux-gnu",                
+                "/usr/include/x86_64-linux-gnu",
                 "${workspaceRoot}"
             ],
             "defines": [],
@@ -39,7 +43,7 @@
                     "/usr/local/include",
                     "/usr/lib/clang/3.8.0/include",
                     "/usr/include",
-                    "/usr/include/x86_64-linux-gnu",                    
+                    "/usr/include/x86_64-linux-gnu",
                     "/home/ryno/Documents/Work/repo/UnrealEngine/Engine/Source/Runtime/",
                     "${workspaceRoot}"
                 ],
@@ -68,5 +72,5 @@
             }
         }
     ],
-    "version": 2
+    "version": 3
 }
